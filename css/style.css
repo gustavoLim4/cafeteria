@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    padding-top: 100px;
+    background-color: #000;
+
+}
+
+
+.nav_container {
+    display: flex;
+    background-color: black;
+    padding: 5px 0px 10px 120px;
+}
+
+.nav_links {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.nav_links a {
+    text-decoration: none;
+    color: #FFBD59;
+    font-size: 1.9em;
+    font-weight: 600;
+}
+.nav_links a:hover{
+    border-bottom: 1px solid #ffca7a;
+    transition: 0.5s;
+    color: #ffca7a;
+    transform: scale(1.1);
+    
+}
+
+.nav_container img {
+    width: 8%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+
+.layer {
+    position: fixed;
+    left: 0;
+    width: 120%;
+    height: 100vh;
+    margin-left: -20%;
+    display: flex;
+    background-color: black;
+    
+}
+
+
+.layer img {
+    width: 100%;
+    filter: drop-shadow(10px 7px 10px #FFBD59);
+}
+
+
+#txt-animado {
+    font-size: 3.5em;
+    font-weight: 300;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+#txt-animado span {
+    position: relative;
+    margin-left: 20px;
+}
+
+#txt-animado span::before {
+    content: "";
+    color: #FFBD59;
+    animation: palavras 20s infinite;
+    ;
+}
+
+#txt-animado span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #FFBD59;
+    right: -10px;
+    animation: cursor .8s infinite, digita 20s steps(15) infinite;
+    width: calc(100% + 14px);
+    background-color: rgb(0, 0, 0);
+
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 14px);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-left: 2px solid #ffffff;
+    }
+}
+
+@keyframes palavras {
+    0%, 25% {
+        content: "Café?";
+    }
+    25.01%, 50% {
+        content: "Chá?";
+    }
+    50.01%, 75% {
+        content: "Capuccino?";
+    }
+    75.01%, 100% {
+        content: "Chocolate?";
+    }
+}
+
+
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    margin-top: -10%;
+
+}
+
+section {
+    height: 200vh;
+    background-image: url(../imgCafe/tomandoCafe.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+
+}
+
+.nome {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000000;
+}
+
+.nome h2 {
+    color: #000;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+.nome span {
+    font-weight: 700;
+    font-size: 1.9em;
+    letter-spacing: 0.25rem;
+    background: url(../imgCafe/fotoCafe.jpg);
+    background-clip: text;
+    background-size: cover;
+    color: transparent;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+
+.sec2 {
+    height: 60vh;
+    background-image: url(../imgCafe/fotoCafe.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    
+}
+
+.title-sobre {
+    background-color: #000;
+    padding-left: 40px;
+    font-size: 2.9em;
+    color: #FFBD59;
+}
+.coteudo {
+    display: flex;
+}
+.coteudo p {
+    font-size: .7em;
+    color: #fff;
+    width: 70%;
+}
+.coteudo img {
+    width: 25%;
+}
+.coteudo img{animation: bounce 5s infinite;} @keyframes bounce {
+    0% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+
+}
+.title-sobre span{
+    text-align: center;
+    color: #FFBD59;
+}
+
+.td-cards {
+    padding: 70px 0px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-client {
+    background: #000000;
+    width: 28%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 4px solid #FFBD59;
+    box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    height: 370px;
+  }
+  .card-client img {
+    width: 65%;
+    border-radius: 60%;
+    border: 7px solid #FFBD59;
+  }
+  
+  .card-client:hover {
+    transform: translateY(-10px);
+  }
+  
+  
+  
+  .name-client {
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .name-client span {
+    display: block;
+    font-weight: 200;
+    font-size: 16px;
+  }
+  
+  .social-media:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background: #FFBD59;
+  }
+  
+  .social-media a {
+    position: relative;
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .social-media a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-media a svg {
+    width: 1.1rem;
+    fill: currentColor;
+  }
+  
+  /*-- Tooltip Social Media --*/
+  .tooltip-social {
+    background: #262626;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 0.5rem 0.4rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -90%);
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+  
+  .tooltip-social:after {
+    content: " ";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    border: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: transparent;
+    transform: translate(-50%, 100%);
+  }
+  
+  .social-media a .tooltip-social:after {
+    border-top-color: #262626;
+  }
+  
+  .social-media a:hover .tooltip-social {
+    opacity: 1;
+    transform: translate(-50%, -130%);
+  }
+  .social-media a:hover {
+    color: #ffd699;
+  }
+   
+
